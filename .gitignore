@@ -1,5 +1,5 @@
 # Built landing page
-site/
+# site/ se versiona: es la web de TecnicaIE
 build/
 
 # Dependencies

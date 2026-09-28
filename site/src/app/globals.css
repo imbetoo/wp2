@@ -1,0 +1,250 @@
+@import "tailwindcss";
+
+:root {
+  /* Superficies */
+  --paper: #f4f3ef;
+  --paper-raised: #fbfaf7;
+  --ink: #0e0e0c;
+  --ink-soft: #2a2a27;
+  --muted: #5c5b56;
+  --line: #d9d7cf;
+
+  /* Bloque oscuro */
+  --night: #0e0e0c;
+  --night-raised: #181816;
+  --night-line: #2c2c29;
+  --night-text: #f4f3ef;
+  --night-muted: #a3a199;
+
+  /* Marca TecnicaIE */
+  --brand: #37ca37;
+  --brand-ink: #1c6e1c; /* verde legible sobre papel (5.4:1) */
+
+  /* Movimiento (tokens del skill animate) */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-night: var(--night);
+  --color-night-raised: var(--night-raised);
+  --color-night-line: var(--night-line);
+  --color-night-text: var(--night-text);
+  --color-night-muted: var(--night-muted);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+
+  --font-display: var(--font-sora);
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+}
+
+/* Escala tipográfica fluida (ratio ~1.25, titulares hasta ~9rem) */
+@theme {
+  --text-eyebrow: 0.75rem;
+  --text-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --text-lead: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
+  --text-h3: clamp(1.5rem, 1.3rem + 0.9vw, 2.125rem);
+  --text-h2: clamp(2.25rem, 1.6rem + 3vw, 4.5rem);
+  --text-hero: clamp(2.75rem, 0.9rem + 6.4vw, 7.25rem);
+  --text-display: clamp(2.75rem, 1.2rem + 7.2vw, 9rem);
+  --text-metric: clamp(3rem, 2rem + 4.5vw, 6.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  /* Red de seguridad; el layout ya evita anchos fijos y 100vw */
+  overflow-x: clip;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-plex-sans), ui-serif, serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--brand);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@layer components {
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  min-height: 3rem;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 1rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    transform 160ms var(--ease-out),
+    background-color 200ms var(--ease-out),
+    color 200ms var(--ease-out),
+    border-color 200ms var(--ease-out);
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn-primary {
+  background: var(--brand);
+  color: var(--ink);
+}
+.btn-dark {
+  background: var(--ink);
+  color: var(--paper);
+}
+.btn-ghost {
+  border: 1px solid currentColor;
+  color: inherit;
+}
+.btn .btn-arrow {
+  transition: transform 200ms var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover {
+    background: #4ad84a;
+  }
+  .btn-dark:hover {
+    background: var(--ink-soft);
+  }
+  .btn-ghost:hover {
+    background: color-mix(in oklab, currentColor 8%, transparent);
+  }
+  .btn:hover .btn-arrow {
+    transform: translateX(4px);
+  }
+}
+
+/* ---------- Enlace subrayado que crece ---------- */
+.link-line {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 250ms var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .link-line:hover {
+    background-size: 100% 1px;
+  }
+}
+}
+
+/* ---------- Plano del Hero: trazo que se dibuja ---------- */
+.draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 800ms var(--ease-in-out) forwards;
+}
+.draw-fill {
+  opacity: 0;
+  animation: fade-in 600ms var(--ease-out) forwards;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .draw {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+  .draw-fill {
+    animation-duration: 300ms;
+    animation-delay: 0ms !important;
+  }
+}
+
+/* ---------- Modal ---------- */
+.dialog-overlay {
+  transition: opacity 250ms var(--ease-out);
+}
+.dialog-overlay[data-state="open"] {
+  animation: fade-in 250ms var(--ease-out);
+}
+.dialog-overlay[data-state="closed"] {
+  animation: fade-out 190ms var(--ease-out);
+}
+.dialog-content[data-state="open"] {
+  animation: dialog-in 250ms var(--ease-out);
+}
+.dialog-content[data-state="closed"] {
+  animation: dialog-out 190ms var(--ease-out);
+}
+.sheet-content[data-state="open"] {
+  animation: sheet-in 400ms var(--ease-drawer);
+}
+.sheet-content[data-state="closed"] {
+  animation: sheet-out 300ms var(--ease-drawer);
+}
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+@keyframes dialog-out {
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+@keyframes sheet-in {
+  from {
+    transform: translateX(100%);
+  }
+}
+@keyframes sheet-out {
+  to {
+    transform: translateX(100%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dialog-content[data-state="open"],
+  .sheet-content[data-state="open"] {
+    animation: fade-in 200ms var(--ease-out);
+  }
+  .dialog-content[data-state="closed"],
+  .sheet-content[data-state="closed"] {
+    animation: fade-out 150ms var(--ease-out);
+  }
+}
