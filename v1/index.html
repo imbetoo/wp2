@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnicaIE | Ingeniería estructural & Asistencia técnica</title>
+    <meta name="description" content="TecnicaIE — Ingeniería estructural y asistencia técnica en obra. Cálculo, rehabilitación estructural, peritajes e informes técnicos con Santiago Zarazo Torres, Ingeniero Técnico Industrial colegiado (Col. Nº 2976 COITIVIGO).">
+    <link rel="canonical" href="https://www.tecnicaie.es/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TecnicaIE | Ingeniería Estructural & Asistencia Técnica">
+    <meta property="og:description" content="Diseño estructural inteligente. Cálculo, optimización y rehabilitación técnica con riguroso cumplimiento normativo (CTE, Código Estructural, Eurocódigo).">
+    <meta property="og:url" content="https://www.tecnicaie.es/">
+    <meta property="og:image" content="https://www.tecnicaie.es/og-image.jpg">
+    <meta property="og:locale" content="es_ES">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TecnicaIE | Ingeniería Estructural & Asistencia Técnica">
+    <meta name="twitter:description" content="Diseño estructural inteligente. Cálculo, optimización y rehabilitación técnica con riguroso cumplimiento normativo.">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="TecnicaIE" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Iconos (Iconify) -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    
+    <!-- Tipografías de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Nuestra Hoja de Estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "TecnicaIE",
+        "url": "https://www.tecnicaie.es/",
+        "logo": "https://www.tecnicaie.es/favicon.png",
+        "image": "https://www.tecnicaie.es/favicon.png",
+        "description": "Ingeniería estructural y asistencia técnica en obra: cálculo, rehabilitación, peritajes e informes técnicos.",
+        "email": "szarazo@tecnicaie.es",
+        "telephone": "+34661538638",
+        "areaServed": ["ES", "EU"],
+        "founder": {
+            "@type": "Person",
+            "name": "Santiago Zarazo Torres",
+            "jobTitle": "Ingeniero Técnico Industrial",
+            "identifier": "Col. Nº 2976 COITIVIGO"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/santiago-zarazo-76a18831/",
+            "https://www.instagram.com/tecnica_ingenieria/"
+        ]
+        }
+      </script>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+<header class="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo">
+            tecnica<span class="logo-green">ie</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#experiencia" class="nav-link">Experiencia</a>
+            <a href="#servicios" class="nav-link">Servicios</a>
+            <a href="#proyectos" class="nav-link">Proyectos</a>
+            <div class="btn-contact-wrapper">
+                <a href="#contacto" class="btn-contact">
+                    <span>Contacto</span>
+                    <span class="iconify contact-icon" data-icon="streamline:phone-ringing-1-solid" data-width="16"></span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Tu botón existente con ID para JS -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir Menú">
+            <span class="iconify" data-icon="lucide:menu" data-width="24"></span>
+        </button>
+    </div>
+</header>
+
+<!-- MENÚ MÓVIL DESLIZANTE -->
+<div class="nav-overlay" id="nav-overlay"></div>
+<nav class="nav-mobile" id="nav-mobile">
+    <button class="menu-close" id="menu-close" aria-label="Cerrar menú">&times;</button>
+    <ul class="mobile-nav-links">
+        <li><a href="#experiencia" class="mobile-link">Experiencia</a></li>
+        <li><a href="#servicios" class="mobile-link">Servicios</a></li>
+        <li><a href="#proyectos" class="mobile-link">Proyectos</a></li>
+        <li><a href="#contacto" class="btn-contact-mobile mobile-link">Contacto</a></li>
+    </ul>
+</nav>
+
+    <main>
+        <!-- SECCIÓN 1: HERO (Portada) -->
+        <section class="hero-section">
+            <div class="hero-container">
+                
+                <div class="badge-status">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Disponible para nuevos proyectos</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Estructuras fiables <br>
+                    <span class="text-muted">e</span> innovadoras<span class="logo-green">.</span>
+                </h1>
+
+                <div class="hero-footer">
+                    <p class="hero-description">
+                        Diseño estructural inteligente. Soluciones de cálculo, optimización y rehabilitación técnica con riguroso cumplimiento normativo.
+                    </p>
+                    <a href="#contacto" class="btn-primary">
+                        <span>Hablemos de su proyecto</span>
+                        <span class="iconify" data-icon="ph:arrow-right-bold" data-width="18"></span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: BANDA DE ESPECIFICACIONES TÉCNICAS -->
+        <section class="specs-bar reveal">
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <span class="spec-label">Cualificación</span>
+                    <span class="spec-value">Ingeniería de Estructuras</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Especialidad</span>
+                    <span class="spec-value">Cálculo</span>
+                    <span class="spec-value">Asistencia Técnica</span>
+                    <span class="spec-value">Estudios de viabilidad</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Ámbito</span>
+                    <span class="spec-value">Nacional</span>
+                    <span class="spec-value">Europa</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Normativa</span>
+                    <span class="spec-value">CTE  /  Código Estructural</span>
+                    <span class="spec-value">Eurocódigo</span><span class="spec-label">EC1, EC2, EC3, EC4</span>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: MÉTRICAS / EXPERIENCIA (Extraído de tus notas) -->
+        <section id="experiencia" class="metrics-section reveal">
+                <div class="section-container">
+                    <div class="section-header">
+                        <span class="section-tag">// Trayectoria Comprobada</span>
+                        <h2 class="section-title">Experiencia acumulada en cifras</h2>
+                    </div>
+            
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <span class="metric-number" data-target="20" data-start="12" data-prefix="+">+0</span>
+                            <span class="metric-label">Años de ejercicio</span>
+                            <p class="metric-desc">Conocimiento técnico y solvencia en el sector.</p>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-number" data-target="825" data-start="699" data-prefix="+">+699</span>
+                            <span class="metric-label">Referencias de estructura</span>
+                            <p class="metric-desc">Cálculo y optimización de proyectos.</p>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-number" data-target="270" data-start="179" data-prefix="+">+179</span>
+                            <span class="metric-label">Instalaciones</span>
+                            <p class="metric-desc">Desarrollo y coordinación técnica.</p>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-number" data-target="250" data-start="179" data-prefix="+">+179</span>
+                            <span class="metric-label">Informes y asistencias</span>
+                            <p class="metric-desc">Peritajes, patologías y dirección técnica de obra.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- SECCIÓN 4: SERVICIOS TÉCNICOS -->
+        <section id="servicios" class="services-section reveal">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">// Soluciones Técnicas</span>
+                    <h2 class="section-title">Servicios de Ingeniería</h2>
+                </div>
+
+                <div class="services-grid reveal">
+                    <div class="service-card reveal">
+                        <span class="service-number">01</span>
+                        <div class="service-icon">
+                            <span class="iconify" data-icon="lucide:box-select" data-width="32"></span>
+                        </div>
+                        <h3 class="service-title">Cálculo y Rehabilitación Estructural</h3>
+                        <p class="service-desc">
+                            Dimensionado de estructuras de cualquier tipo. Análisis de cargas, capacidad portante, viabilidad y soluciones planteadas considerando plazos y coste.
+                        </p>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <span class="service-number">02</span>
+                        <div class="service-icon">
+                            <span class="iconify" data-icon="lucide:hard-hat" data-width="32"></span>
+                        </div>
+                        <h3 class="service-title">Asistencia técnica en obra</h3>
+                        <p class="service-desc">
+                            Estudio y seguimiento en obra. Mediciones precisas de estructura, visitas de control y apoyo a D.F. y/o constructora.
+                        </p>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <span class="service-number">03</span>
+                        <div class="service-icon">
+                            <span class="iconify" data-icon="lucide:file-text" data-width="32"></span>
+                        </div>
+                        <h3 class="service-title">Informes técnicos y Peritajes</h3>
+                        <p class="service-desc">
+                            Dictámenes de patologías constructivas, certificados de solidez estructural y documentación técnica con rigor profesional para tramitaciones administrativas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: PROYECTOS / PORTAFOLIO -->
+        <section id="proyectos" class="portfolio-section">
+            <div class="portfolio-container">
+                <div class="portfolio-info">
+                    <span class="portfolio-tag">Portafolio Directo</span>
+                    <h2 class="portfolio-title">De la precisión del cálculo a la realidad de la obra.</h2>
+                    <p class="portfolio-desc">
+                        Obras y resultados propios. Selección técnica de estructuras y obras ejecutadas a lo largo de los años.
+                    </p>
+                </div>
+
+                <a href="proyectos.html" class="portfolio-card-btn">
+                    <div class="portfolio-card-text">
+                        <span class="portfolio-card-title">Ver Proyectos</span>
+                        <span class="portfolio-card-subtitle">Galería técnica de ejecución</span>
+                    </div>
+                    <div class="portfolio-card-icon">
+                        <span class="iconify" data-icon="lucide:arrow-up-right" data-width="20"></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA Y CONTACTO -->
+    <footer id="contacto" class="site-footer reveal">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo">
+                        tecnica<span class="logo-green">ie</span>
+                    </a>
+                    <p class="footer-text">
+                        Ingeniería especializada en estructuras, asistencia a pie de obra y optimización técnica.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Técnico Titular</h4>
+                    <p class="footer-person-name">Santiago Zarazo Torres</p>
+                    <p class="footer-person-title">Ingeniero Técnico Industrial</p>
+                    <a href="https://coitivigo.es" target="_blank" rel="noopener noreferrer" class="footer-link-col">
+                        Col. Nº 2976 COITIVIGO <span class="iconify" data-icon="lucide:external-link" data-width="12"></span>
+                    </a>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Contacto directo</h4>
+                    <p>
+                        <a href="mailto:szarazo@tecnicaie.es" class="footer-contact-link">szarazo@tecnicaie.es</a>
+                        <button class="copy-btn" data-copy="szarazo@tecnicaie.es" aria-label="Copiar email" type="button">
+                            <span class="iconify" data-icon="lucide:copy" data-width="14"></span>
+                        </button>
+                    </p>
+                        <a href="tel:+34661538638" class="footer-contact-link">+34 661 538 638</a>
+                        <button class="copy-btn" data-copy="+34 661 538 638" aria-label="Copiar email" type="button">
+                        <span class="iconify" data-icon="lucide:copy" data-width="14"></span>
+                        </button>
+                    </p>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Redes</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/santiago-zarazo-76a18831/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+                            <span class="iconify" data-icon="lucide:linkedin" data-width="18"></span>
+                        </a>
+                        <a href="https://www.instagram.com/tecnica_ingenieria/" class="social-btn" title="Instagram">
+                            <span class="iconify" data-icon="lucide:instagram" data-width="18"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Avisos de Propiedad y LOPD (Notas manuscritas) -->
+            <div class="legal-notices">
+                    <a href="legal.html" rel="noopener noreferrer" target="_blank" class="legal-link">
+                        <span class="legal-link">Aviso legal y protección de datos</span>
+                        <span class="iconify" data-icon="lucide:arrow-up-right" data-width="14"></span>
+                    </a>
+                </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 TecnicaIE — Santiago Zarazo Torres. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

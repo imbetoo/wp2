@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso legal y Protección de datos | TecnicaIE</title>
+    <meta name="description" content="Aviso legal y protección de datos de TecnicaIE — Santiago Zarazo Torres, Ingeniero Técnico Industrial.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://www.tecnicaie.es/legal.html">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="TecnicaIE" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Tipografías de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;350;400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- Iconos Iconify -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Fondo con cuadrícula técnica idéntica al index */
+        body {
+            background-color: #FFFFFF;
+            background-image: 
+                linear-gradient(to right, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+            background-size: 40px 40px; /* Tamaño de cada cuadrado de la cuadrícula */
+            min-height: 100vh;
+        }
+
+        /* Estilos del contenedor de texto */
+        .legal-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 40px;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--primary-dark);
+            transform: translateX(-4px);
+        }
+
+        .legal-title {
+            font-family: var(--font-space);
+            font-size: 2.125rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 40px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #606060;
+        }
+
+        .legal-block {
+            margin-bottom: 36px;
+        }
+
+        .legal-block h2 {
+            font-family: var(--font-space);
+            font-size: 1.45rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            transition: .2s ease-in-out
+        }
+
+        .legal-block h2:hover {
+            color: #37CA37;
+        }
+
+        .legal-block p {
+            text-align: justify;
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: #505050;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="legal-container">
+        
+        <!-- Enlace para volver -->
+        <a href="index.html" class="back-link">
+            <span class="iconify" data-icon="lucide:arrow-left" data-width="16"></span>
+            Volver a la página principal
+        </a>
+
+        <h1 class="legal-title">Aviso legal y Protección de datos</h1>
+
+        <!-- BLOQUE 1 -->
+        <section class="legal-block">
+            <h2>Aviso de propiedad</h2>
+            <p>Todo el contenido de esta web y todos sus archivos adjuntos son producto y propiedad de Santiago Zarazo Torres
+                y en su caso, tienen el permiso verbal de los propietarios intelectuales de los proyectos y del
+                resultado de los mismos, para su inclusión en este medio.</p>
+            <p>Puedes disentir de ese permiso contactándonos.</p>
+            <p>No está permitido replicar la información y datos de esta web salvo indicación expresa.</p>
+        </section>
+
+        <!-- BLOQUE 2 -->
+        <section class="legal-block">
+            <h2>Protección de datos (LOPD)</h2>
+            <p>No se recopilarán ni compartirán datos personales de ningún tipo.</p>
+            <p>Existe un fichero de gestión de datos personales según LOPD, contáctenos en caso de alguna duda o requerimiento al respecto.</p>
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Proyectos | TecnicaIE</title>
+    <meta name="description" content="Galería técnica de proyectos ejecutados por TecnicaIE: cálculo estructural, cimentaciones, forjados y asistencia técnica en obra.">
+    <link rel="canonical" href="https://www.tecnicaie.es/proyectos.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Galería de Proyectos | TecnicaIE">
+    <meta property="og:description" content="Obras y resultados propios de ingeniería estructural, sin imágenes de stock.">
+    <meta property="og:url" content="https://www.tecnicaie.es/proyectos.html">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="TecnicaIE" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Iconos (Iconify) -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    
+    <!-- Tipografías de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Nuestra Hoja de Estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                tecnica<span class="logo-green">ie</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html#experiencia" class="nav-link">Experiencia</a>
+                <a href="index.html#servicios" class="nav-link">Servicios</a>
+                <a href="proyectos.html" class="nav-link" aria-current="page">Proyectos</a>
+                <div class="btn-contact-wrapper">
+                    <a href="index.html#contacto" class="btn-contact">
+                        <span>Contacto</span>
+                        <span class="iconify contact-icon" data-icon="streamline:phone-ringing-1-solid" data-width="16"></span>
+                    </a>
+                </div>
+            </nav>
+
+            <button class="mobile-menu-btn" aria-label="Abrir Menú">
+                <span class="iconify" data-icon="lucide:menu" data-width="24"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MENÚ MÓVIL DESLIZANTE -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <nav class="nav-mobile" id="nav-mobile">
+        <button class="menu-close" id="menu-close" aria-label="Cerrar menú">&times;</button>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html#experiencia" class="mobile-link">Experiencia</a></li>
+            <li><a href="index.html#servicios" class="mobile-link">Servicios</a></li>
+            <li><a href="proyectos.html" class="mobile-link">Proyectos</a></li>
+            <li><a href="index.html#contacto" class="btn-contact-mobile mobile-link">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="projects-page">
+        <section class="projects-hero">
+            <div class="section-container">
+                
+                <!-- CABECERA DE PÁGINA Y SELECTOR DE VISTA -->
+                <div class="projects-header-wrapper">
+                    <div class="section-header">
+                        <span class="section-tag">// PORTAFOLIO TÉCNICO</span>
+                        <h1 class="section-title">Galería de proyectos</h1>
+                    </div>
+
+                    <!-- CONTROL DE VISTAS (FIGMA) -->
+                    <div class="view-selector" role="group" aria-label="Selector de columnas de la galería">
+                        <span class="view-label">Vista</span>
+                        
+                        <div class="view-divider"></div>
+                        <button class="view-btn" data-cols="1" aria-pressed="false"  title="Vista 1 columna">
+                            <span class="view-box"><span class="view-num">1</span></span>
+                        </button>
+                        
+                        <div class="view-divider"></div>
+                        <button class="view-btn" data-cols="2" aria-pressed="false" title="Vista 2 columnas">
+                            <span class="view-box"><span class="view-num">2</span></span>
+                        </button>
+                        
+                        <div class="view-divider"></div>
+                        <!-- Activo por defecto en 3 columnas -->
+                        <button class="view-btn active" data-cols="3" aria-pressed="true" title="Vista 3 columnas">
+                            <span class="view-box"><span class="view-num">3</span></span>
+                        </button>
+                        
+                        <div class="view-divider"></div>
+                        <button class="view-btn" data-cols="4" aria-pressed="false" title="Vista 4 columnas">
+                            <span class="view-box"><span class="view-num">4</span></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- RETÍCULA DE PROYECTOS (3 COLUMNAS) -->
+                <div class="projects-grid">
+                    
+                    <!-- TARJETA 1 -->
+                    <article class="project-card" tabindex="0" role="button" aria-label="Ver ficha del proyecto">
+                        <div class="card-image-wrapper">
+                            <img src="C:\Users\betoj\Desktop\web pa\pa2\image.png" alt="Cálculo Estructural" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-text">
+                                <h2 class="card-title">Título Foto.</h2>
+                                <p class="card-desc">Descripción General</p>
+                            </div>
+                            <span class="card-date">xx/xx/xx</span>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA 2 -->
+                    <article class="project-card" tabindex="0" role="button" aria-label="Ver ficha del proyecto">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Estructura Metálica" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-text">
+                                <h2 class="card-title">Título Foto.</h2>
+                                <p class="card-desc">Descripción General</p>
+                            </div>
+                            <span class="card-date">xx/xx/xx</span>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA 3 -->
+                    <article class="project-card" tabindex="0" role="button" aria-label="Ver ficha del proyecto">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Supervisión Técnica" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-text">
+                                <h2 class="card-title">Título Foto.</h2>
+                                <p class="card-desc">Descripción General</p>
+                            </div>
+                            <span class="card-date">xx/xx/xx</span>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA 4 -->
+                    <article class="project-card" tabindex="0" role="button" aria-label="Ver ficha del proyecto">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Nave Industrial" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-text">
+                                <h2 class="card-title">Título Foto.</h2>
+                                <p class="card-desc">Descripción General</p>
+                            </div>
+                            <span class="card-date">xx/xx/xx</span>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA 5 -->
+                    <article class="project-card" tabindex="0" role="button" aria-label="Ver ficha del proyecto">
+                        <div class="card-image-wrapper">
+                            <img src="C:\Users\betoj\Desktop\web pa\pa2\image.png" alt="Rehabilitación" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-text">
+                                <h2 class="card-title">Título Foto.</h2>
+                                <p class="card-desc">Descripción General</p>
+                            </div>
+                            <span class="card-date">xx/xx/xx</span>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA 6 -->
+                    <article class="project-card" tabindex="0" role="button" aria-label="Ver ficha del proyecto">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Cimentación" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-text">
+                                <h2 class="card-title">Título Foto.</h2>
+                                <p class="card-desc">Descripción General</p>
+                            </div>
+                            <span class="card-date">xx/xx/xx</span>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA 7 -->
+                    <article class="project-card" tabindex="0" role="button" aria-label="Ver ficha del proyecto">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Forjados" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-text">
+                                <h2 class="card-title">Título Foto.</h2>
+                                <p class="card-desc">Descripción General</p>
+                            </div>
+                            <span class="card-date">xx/xx/xx</span>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA 8 -->
+                    <article class="project-card" tabindex="0" role="button" aria-label="Ver ficha del proyecto">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Asistencia de Obra" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-text">
+                                <h2 class="card-title">Título Foto.</h2>
+                                <p class="card-desc">Descripción General</p>
+                            </div>
+                            <span class="card-date">xx/xx/xx</span>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA 9 -->
+                    <article class="project-card" tabindex="0" role="button" aria-label="Ver ficha del proyecto">
+                        <div class="card-image-wrapper">
+                            <img src="C:\Users\betoj\Desktop\web pa\pa2\image.png" alt="Informe Pericial" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-text">
+                                <h2 class="card-title">Título Foto.</h2>
+                                <p class="card-desc">Descripción General</p>
+                            </div>
+                            <span class="card-date">xx/xx/xx</span>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA 10 -->
+                    <article class="project-card" tabindex="0" role="button" aria-label="Ver ficha del proyecto">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Estructura de Hormigón" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-text">
+                                <h2 class="card-title">Título Foto.</h2>
+                                <p class="card-desc">Descripción General</p>
+                            </div>
+                            <span class="card-date">xx/xx/xx</span>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA 11 -->
+                    <article class="project-card" tabindex="0" role="button" aria-label="Ver ficha del proyecto">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Estructura Mixta" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-text">
+                                <h2 class="card-title">Título Foto.</h2>
+                                <p class="card-desc">Descripción General</p>
+                            </div>
+                            <span class="card-date">xx/xx/xx</span>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA 12 -->
+                    <article class="project-card" tabindex="0" role="button" aria-label="Ver ficha del proyecto">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Cubierta Ligera" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-text">
+                                <h2 class="card-title">Título Foto.</h2>
+                                <p class="card-desc">Descripción General</p>
+                            </div>
+                            <span class="card-date">xx/xx/xx</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA Y CONTACTO -->
+    <footer id="contacto" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        tecnica<span class="logo-green">ie</span>
+                    </a>
+                    <p class="footer-text">
+                        Ingeniería especializada en estructuras, asistencia a pie de obra y optimización técnica.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Técnico Titular</h4>
+                    <p class="footer-person-name">Santiago Zarazo Torres</p>
+                    <p class="footer-person-title">Ingeniero Técnico Industrial</p>
+                    <a href="https://coitivigo.es" target="_blank" rel="noopener noreferrer" class="footer-link-col">
+                        Col. Nº 2976 COITIVIGO <span class="iconify" data-icon="lucide:external-link" data-width="12"></span>
+                    </a>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Contacto directo</h4>
+                    <p><a href="mailto:szarazo@tecnicaie.es" class="footer-contact-link">szarazo@tecnicaie.es</a></p>
+                    <p><a href="tel:+34661538638" class="footer-contact-link">+34 661 53 86 38</a></p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Redes</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/santiago-zarazo-76a18831/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+                            <span class="iconify" data-icon="lucide:linkedin" data-width="18"></span>
+                        </a>
+                        <a href="https://www.instagram.com/tecnica_ingenieria/" class="social-btn" title="Instagram">
+                            <span class="iconify" data-icon="lucide:instagram" data-width="18"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legal-notices">
+                <a href="legal.html" target="_blank" rel="noopener noreferrer" class="legal-link">
+                    <span class="legal-link">Aviso legal y protección de datos</span>
+                    <span class="iconify" data-icon="lucide:arrow-up-right" data-width="14"></span>
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 TecnicaIE — Santiago Zarazo Torres. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+<!-- MODAL DE FICHA TÉCNICA (CON EFECTO APILADO) -->
+<div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title-text" aria-hidden="true">
+    <!-- Flecha Izquierda -->
+    <button class="modal-nav prev-btn" id="modal-prev" aria-label="Imagen anterior">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+
+    <!-- Wrapper para el efecto de apilado (Baraja de cartas) -->
+    <div class="modal-stack-wrapper">
+        <!-- Tarjeta trasera (Siguiente imagen) -->
+        <div class="modal-card-bg" id="modal-card-bg">
+            <img id="modal-img-bg" src="" alt="Siguiente vista">
+        </div>
+
+        <!-- Tarjeta Principal -->
+        <div class="modal-card">
+            <!-- Botón de Cierre (X) -->
+            <button class="modal-close" id="modal-close" aria-label="Cerrar modal">&times;</button>
+
+            <!-- Visor de Imagen y Contador -->
+            <div class="modal-image-wrapper">
+                <img id="modal-img" src="" alt="Vista del proyecto">
+                <span id="modal-counter" class="modal-counter">1 / 1</span>
+            </div>
+
+            <!-- Información y Descripción -->
+            <div class="modal-info">
+                <h2 class="modal-title">
+                    <span id="modal-title-text">Título</span> &ndash; <span id="modal-date-text">xx/xx/xx</span>
+                </h2>
+                <div class="modal-description-scroll" id="modal-desc-text"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flecha Derecha -->
+    <button class="modal-nav next-btn" id="modal-next" aria-label="Siguiente imagen">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+</div>
+</body>
+</html>
