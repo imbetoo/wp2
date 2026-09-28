@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { site } from "@/lib/site";
 import { Logo } from "./logo";
 
@@ -56,9 +55,9 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-night-line pt-6 text-sm sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 TecnicaIE · {site.person.name}</p>
-          <Link href="/legal" className="link-line self-start text-night-text sm:self-auto">
+          <a href="/legal/" className="link-line self-start text-night-text sm:self-auto">
             Aviso legal y protección de datos
-          </Link>
+          </a>
         </div>
 
         <p className="mt-10 text-center text-xs text-night-muted/80">
